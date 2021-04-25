@@ -1,6 +1,6 @@
 var button = document.querySelector(".button")
 var inputValue = document.querySelector(".inputValue");
-var name = document.querySelector(".name")
+var place = document.querySelector(".name")
 var desc = document.querySelector(".desc")
 var temp = document.querySelector(".temp")
 
@@ -11,13 +11,13 @@ button.addEventListener('click', function(){
     .then(data =>{
         
             var nameValue = data['name'];
-            var tempValue = date['main']['temp'];
+            var tempValue = data['main']['temp'];
             var descValue = data['weather']['0']['description'];
     
           
-            name1.innerHTML = nameValue;
-            temp.innerHTML = tempValue;
-            desc.innerHTML = descValue
+            place.innerHTML = nameValue;
+            temp.innerHTML = "Temperature: "+tempValue+" K";
+            desc.innerHTML = "Description: "+ descValue
         
     })
     
